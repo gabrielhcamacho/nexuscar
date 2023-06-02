@@ -11,7 +11,8 @@ import {
   Price,
   Type,
   CarImage,
-  Info
+  Info,
+  Header
 } from './styles'
 
 
@@ -32,7 +33,6 @@ interface Props{
 export function CarCard( {data} : Props ) {
   return (
     <Container>
-      
       <Details>
         <Brand>{data.brand}</Brand>
         <Name>{data.name}</Name>
@@ -49,7 +49,7 @@ export function CarCard( {data} : Props ) {
         </About>
       </Details>
 
-      <CarImage source={{ uri: data.image }} />
+      <CarImage source={{ uri: data.image }}/>
     </Container>
   );
 }

@@ -2,6 +2,7 @@ import styled from 'styled-components/native'
 import { RFValue } from 'react-native-responsive-fontsize'
 
 
+
 export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.background_secondary};
   width: 100%;
@@ -21,7 +22,7 @@ export const Details = styled.View`
 export const Brand = styled.Text`
   font-family: ${({ theme }) => theme.fonts.secondary_500};
   color: ${({ theme }) => theme.colors.text_detail};
-  font-size: ${RFValue(12)}px;
+  font-size: ${RFValue(10)}px;
   text-transform: uppercase;
 `
 
@@ -34,7 +35,7 @@ export const Name = styled.Text`
 export const About = styled.View`
   flex-direction: row;
   align-items: center;
-  margin-bottom: 16px;
+  margin-top: 16px;
 `
 
 export const Info = styled.View`

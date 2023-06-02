@@ -1,13 +1,16 @@
 import React from 'react';
 import { StatusBar } from 'react-native'
 import { CarCard } from '../../components/CarCard';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import { AntDesign } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 import {
   Container,
   SearchBarContainer,
-  SearchInput
+  SearchInput,
+  Header,
+  Left,
+  BackToPage
 } from './styles'
 
 export function CarList() {
@@ -34,6 +37,15 @@ export function CarList() {
 
   return (
     <Container>
+
+      <Header>
+        <Left>
+          <Ionicons name="ios-chevron-back" size={28} color="black" />
+          <BackToPage>Dashboard</BackToPage>
+        </Left>
+        <Ionicons name="ios-add" size={30} color="black" />
+      </Header>
+
       <StatusBar barStyle={'dark-content'} backgroundColor="transparent" translucent />
       <SearchBarContainer>
         <AntDesign name="search1" size={24} color="black" />
@@ -41,6 +53,7 @@ export function CarList() {
       </SearchBarContainer>
       <CarCard data={carData} />
       <CarCard data={carData2} />
+      
     </Container>
   );
 }
