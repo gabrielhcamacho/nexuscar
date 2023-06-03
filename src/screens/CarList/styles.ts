@@ -47,3 +47,11 @@ export const SearchInput = styled.TextInput`
   font-size: 20px;
   color: ${({ theme }) => theme.colors.title};
 `
+
+export const CarFlatList = styled.FlatList.attrs({
+  contentContainerStyle:{
+    //padding: 24
+  },
+  showVerticalScrollIndicator: false
+})`
+`
