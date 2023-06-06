@@ -6,6 +6,7 @@ export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.background_primary};
   flex: 1;
   padding: 50px 20px;
+  padding-bottom: 0;
 `;
 
 export const Header = styled.View`
@@ -52,6 +53,7 @@ export const CarFlatList = styled.FlatList.attrs({
   contentContainerStyle:{
     //padding: 24
   },
-  showVerticalScrollIndicator: false
+  showsVerticalScrollIndicator: false, 
+  showsHorizontalScrollIndicator: false,
 })`
 `

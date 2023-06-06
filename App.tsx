@@ -7,6 +7,8 @@ import { Archivo_400Regular, Archivo_500Medium, Archivo_600SemiBold } from '@exp
 import { Home } from './src/screens/Home';
 import theme from './src/styles/theme';
 import { CarList } from './src/screens/CarList';
+import { CarDetails } from './src/screens/CarDetails';
+import { VendaConfirmada } from './src/screens/VendaConfirmada';
 
 
 export default function App() {
@@ -19,7 +21,7 @@ export default function App() {
   }
   return (
     <ThemeProvider theme={theme}>
-      <CarList/>
+      <VendaConfirmada/>
     </ThemeProvider>
   );
 }
