@@ -24,9 +24,20 @@ import {
 } from './styles'
 import { CarSummary } from '../../components/CarSummary';
 import { ConfirmButton } from '../../components/ConfirmButton';
+import { useNavigation } from '@react-navigation/native';
 
 
-export function CarDetails() {
+interface Props{
+    onPress: () => void
+}
+
+export function CarDetails(onPress: Props) {
+
+    const navigation = useNavigation()
+    function handleVender() {
+        navigation.navigate('VendaConfirmada')
+    }
+
     return (
         <Container>
 
@@ -60,14 +71,14 @@ export function CarDetails() {
                     <CarSummary name='aa' icon='ios-car-sport-outline' description='teste' />
                     <CarSummary name='aa' icon='ios-car-sport-outline' description='teste' />
                 </SummaryContainer>
-
+ 
                 <About>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur obcaecati temporibus, suscipit voluptas unde nulla nobis repudiandae ab
                 </About>
             </Content>
 
             <Footer>
-                <ConfirmButton title='vender'/>
+                <ConfirmButton title='vender' onPress={handleVender}/>
             </Footer>
 
         </Container>

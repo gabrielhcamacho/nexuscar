@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import GasolineSvg from '../../assets/gasoline.svg'
 
@@ -30,9 +31,17 @@ interface Props{
  data: CarData
 }
 
+
 export function CarCard( {data} : Props ) {
+   
+  const navigation = useNavigation()
+  
+  function handleCarDetails(){
+    navigation.navigate('CarDetails')
+  }
+  
   return (
-    <Container>
+    <Container onPress={handleCarDetails}>
       <Details>
         <Brand>{data.brand}</Brand>
         <Name>{data.name}</Name>

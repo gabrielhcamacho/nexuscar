@@ -9,7 +9,7 @@ export const Container = styled.View`
 export const DashboardContainer = styled.View`
   padding: 40px 30px;
 `
-export const DashCard = styled.View`
+export const DashCard = styled.TouchableOpacity`
   background-color: ${({ theme }) => theme.colors.background_secondary};
   width: 100%;
   height: 200px;

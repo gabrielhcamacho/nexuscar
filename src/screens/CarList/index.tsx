@@ -13,6 +13,7 @@ import {
   BackToPage,
   CarFlatList
 } from './styles'
+import { useNavigation } from '@react-navigation/native';
 
 export function CarList() {
 
@@ -26,6 +27,11 @@ export function CarList() {
     image: 'https://2.bp.blogspot.com/-y4n8sHWryNg/WMBLnqBrYBI/AAAAAAACCfE/75AXU0D-gToh-FU_4X-qGdG0EprvEKQUgCLcB/s1600/A171788_medium.jpg'
   }
 
+  const navigation = useNavigation()
+
+  function handleCarDetails(){
+    navigation.navigate('CarDetails')
+  }
 
   return (
     <Container>
@@ -47,7 +53,7 @@ export function CarList() {
       <CarFlatList
         data={[1,2,3,4,5,6,7,8]}
         keyExtractor={item => String(item)}
-        renderItem={({item}) => <CarCard data={carData} />}
+        renderItem={({item}) => <CarCard data={carData}/>}
       />
       
     </Container>
