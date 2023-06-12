@@ -1,7 +1,10 @@
 import React from 'react';
 import { StatusBar, useWindowDimensions } from 'react-native'
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
 import LogoSvg from '../../assets/logo_background_gray.svg'
 import DoneSvg from '../../assets/done.svg'
+
 
 import {
     Container,
@@ -13,6 +16,12 @@ import {
     Footer
 } from './styles'
 import { useNavigation } from '@react-navigation/native';
+
+type RootStackParamList = {
+    Home: undefined;
+    Profile: { userId: string };
+    Feed: { sort: 'latest' | 'top' } | undefined;
+  };
 
 export function VendaConfirmada() {
 

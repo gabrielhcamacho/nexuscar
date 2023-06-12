@@ -1,5 +1,6 @@
 import styled from 'styled-components/native'
 import { RFValue } from 'react-native-responsive-fontsize'
+import { Ionicons } from '@expo/vector-icons';
 
 export const Container = styled.TouchableOpacity`
   background-color: ${({ theme }) => theme.colors.background_secondary};
@@ -56,10 +57,19 @@ export const Price = styled.Text`
 
 `
 
-export const Type = styled.View``
+export const Type = styled.View`
+  margin-left: 10px;
+`
+
 
 export const CarImage = styled.Image`
   width: 167px;
   height: 85px;
   border-radius: 10px;
+`
+
+export const InterestedIcon = styled(Ionicons)`
+  font-size:  ${RFValue(20)}px;
+  color: ${({theme}) => theme.colors.title};
+  margin-bottom: 2px;
 `

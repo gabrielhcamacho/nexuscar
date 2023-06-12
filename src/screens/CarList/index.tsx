@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'react-native'
-import { CarCard } from '../../components/CarCard';
+import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+
+import { CarCard } from '../../components/CarCard';
+import api from '../../services/api'
+import { CarDTO } from '../../dtos/CarDTO'
+import { Load } from '../../components/Load';
+import { BackButton } from '../../components/BackButton';
 
 import {
   Container,
@@ -11,11 +17,16 @@ import {
   Header,
   Left,
   BackToPage,
-  CarFlatList
+  CarFlatList,
+  AddCarButton,
 } from './styles'
-import { useNavigation } from '@react-navigation/native';
+
+
 
 export function CarList() {
+
+  const [cars, setCars] = useState<CarDTO[]>([])
+  const [load, setLoad] = useState(true)
 
   const carData = {
     brand: 'audi',
@@ -27,21 +38,37 @@ export function CarList() {
     image: 'https://2.bp.blogspot.com/-y4n8sHWryNg/WMBLnqBrYBI/AAAAAAACCfE/75AXU0D-gToh-FU_4X-qGdG0EprvEKQUgCLcB/s1600/A171788_medium.jpg'
   }
 
+
+  useEffect(() => {
+    async function fetchCars() {
+      try {
+        const response = await api.get('/cars')
+        setCars(response.data)
+      } catch (error) {
+        console.log(error)
+      } finally {
+        setLoad(false)
+      }
+    }
+
+    fetchCars()
+  }, [])
+
+
   const navigation = useNavigation()
 
-  function handleCarDetails(){
-    navigation.navigate('CarDetails')
+  function handleAddCar(){
+    navigation.navigate('AddCar')
   }
 
   return (
     <Container>
 
       <Header>
-        <Left>
-          <Ionicons name="ios-chevron-back" size={28} color="black" />
-          <BackToPage>Dashboard</BackToPage>
-        </Left>
-        <Ionicons name="ios-add" size={30} color="black" />
+        <BackButton pageName='Dashboard' />
+        <AddCarButton onPress={() => handleAddCar()}>
+          <Ionicons name="ios-add" size={30} color="black" />
+        </AddCarButton>
       </Header>
 
       <StatusBar barStyle={'dark-content'} backgroundColor="transparent" translucent />
@@ -50,12 +77,14 @@ export function CarList() {
         <SearchInput />
       </SearchBarContainer>
 
-      <CarFlatList
-        data={[1,2,3,4,5,6,7,8]}
-        keyExtractor={item => String(item)}
-        renderItem={({item}) => <CarCard data={carData}/>}
-      />
-      
+      {load ? <Load /> :
+        <CarFlatList
+          data={cars}
+          keyExtractor={item => item.id}
+          renderItem={({ item }) => <CarCard data={item} carData={item} />}
+        />
+      }
+
     </Container>
   );
 }

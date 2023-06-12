@@ -13,7 +13,7 @@ interface Props{
 
 export function ConfirmButton({title, color, ...rest}: Props){
   return (
-    <Container {...rest} color={color}>
+    <Container {...rest} color={color} enabled={false}>
         <Title>{title}</Title>
     </Container>
   );

@@ -45,7 +45,7 @@ export const Details = styled.View`
     flex-direction: row;
     align-items: 'center';
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 40px;
 `
 export const Description = styled.View`
 `
@@ -71,7 +71,7 @@ export const Venda = styled.Text`
     text-transform: uppercase;
 `
 export const Price = styled.Text`
-    font-family: ${({theme}) => theme.fonts.secondary_500};
+    font-family: ${({theme}) => theme.fonts.primary_500};
     color: ${({theme}) => theme.colors.red};
     font-size: ${RFValue(18)}px;
 `

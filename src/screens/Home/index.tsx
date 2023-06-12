@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StatusBar } from 'react-native'
 import { CarCard } from '../../components/CarCard';
 import { Header } from '../../components/Header';
@@ -26,6 +26,7 @@ export function Home() {
     navigation.navigate('CarList')
   }
 
+
   return (
     <Container>
       <StatusBar barStyle={'light-content'} backgroundColor="transparent" translucent />
@@ -40,7 +41,7 @@ export function Home() {
           </Top>
           <CarrosTotal>35</CarrosTotal>
 
-          <SeeMoreButton>
+          <SeeMoreButton onPress={handleCarrosDisponiveis}>
             <Txt>Ver todos</Txt>
           </SeeMoreButton>
         </DashCard>

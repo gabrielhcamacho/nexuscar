@@ -1,5 +1,6 @@
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
+import { useRoute } from '@react-navigation/native'
 
 import { BackButton } from '../../components/BackButton';
 import { ImageSlider } from '../../components/ImageSlider';
@@ -25,24 +26,29 @@ import {
 import { CarSummary } from '../../components/CarSummary';
 import { ConfirmButton } from '../../components/ConfirmButton';
 import { useNavigation } from '@react-navigation/native';
+import { CarDTO } from '../../dtos/CarDTO';
 
 
-interface Props{
-    onPress: () => void
+interface Params{
+    item: CarDTO;
 }
 
-export function CarDetails(onPress: Props) {
+export function CarDetails() {
 
     const navigation = useNavigation()
+    const route = useRoute()
+    const { item } = route.params as Params;
+    console.log(item)
+
     function handleVender() {
-        navigation.navigate('VendaConfirmada')
+        navigation.navigate('ConfirmSale')
     }
 
     return (
         <Container>
 
             <Header>
-                <BackButton pageName='List' onPress={() => { }} />
+                <BackButton pageName='List'/>
                 <RightButton>
                     <Ionicons name="ios-create-outline" size={28} color="black" />
                 </RightButton>
@@ -50,30 +56,28 @@ export function CarDetails(onPress: Props) {
 
 
             <Content>
-                <ImageSlider imagesUrl={['https://2.bp.blogspot.com/-y4n8sHWryNg/WMBLnqBrYBI/AAAAAAACCfE/75AXU0D-gToh-FU_4X-qGdG0EprvEKQUgCLcB/s1600/A171788_medium.jpg']} />
+                <ImageSlider imagesUrl={item.photos} />
 
                 <Details>
                     <Description>
-                        <Brand>Audi</Brand>
-                        <Name>A7</Name>
+                        <Brand>{item.brand}</Brand>
+                        <Name>{item.name}</Name>
                     </Description>
                     <Valor>
                         <Venda>A venda por</Venda>
-                        <Price>R$ 500.000</Price>
+                        <Price>R$ {item.rent.price}.000,00</Price>
                     </Valor>
                 </Details>
 
                 <SummaryContainer>
-                    <CarSummary name='aa' icon='ios-car-sport-outline' description='teste' />
-                    <CarSummary name='aa' icon='ios-car-sport-outline' description='teste' />
-                    <CarSummary name='aa' icon='ios-car-sport-outline' description='teste' />
-                    <CarSummary name='aa' icon='ios-car-sport-outline' description='teste' />
-                    <CarSummary name='aa' icon='ios-car-sport-outline' description='teste' />
-                    <CarSummary name='aa' icon='ios-car-sport-outline' description='teste' />
+                    <CarSummary name={item.placa} icon='ios-car-sport-outline' description='placa' />
+                    <CarSummary name={item.renavam} icon='ios-document-text-outline' description='renavam' />
+                    <CarSummary name={item.cor} icon='ios-color-palette-outline' description='cor' />
+                    <CarSummary name={`R$ ${item.valorCompra}`} icon='ios-car-sport-outline' description='valor de compra' />
                 </SummaryContainer>
  
                 <About>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur obcaecati temporibus, suscipit voluptas unde nulla nobis repudiandae ab
+                   {item.about}
                 </About>
             </Content>
 

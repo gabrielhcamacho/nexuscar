@@ -9,34 +9,15 @@
         "period": "Ao dia",
         "price": 120
       },
+      "interestedPerson" : true,
       "fuel_type": "electric",
       "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/1.png",
-      "accessories": [
-        {
-          "type": "speed",
-          "name": "250km/h"
-        },
-        {
-          "type": "acceleration",
-          "name": "3.8s"
-        },
-        {
-          "type": "turning_diameter",
-          "name": "800 HP"
-        },
-        {
-          "type": "electric_motor",
-          "name": "Elétrico"
-        },
-        {
-          "type": "exchange",
-          "name": "Auto"
-        },
-        {
-          "type": "seats",
-          "name": "5 pessoas"
-        }
-      ],
+      "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
       "photos": [
         "https://storage.googleapis.com/golden-wind/ignite/react-native/images/1.png",
         "https://storage.googleapis.com/golden-wind/ignite/react-native/images/2.png",
@@ -54,32 +35,12 @@
       },
       "fuel_type": "gasoline_motor",
       "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/2.png",
-      "accessories": [
-        {
-          "type": "speed",
-          "name": "315km/h"
-        },
-        {
-          "type": "acceleration",
-          "name": "2.9s"
-        },
-        {
-          "type": "turning_diameter",
-          "name": "700 HP"
-        },
-        {
-          "type": "gasoline_motor",
-          "name": "Gasoline"
-        },
-        {
-          "type": "exchange",
-          "name": "Auto"
-        },
-        {
-          "type": "seats",
-          "name": "4 pessoas"
-        }
-      ],
+      "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
       "photos": [
         "https://storage.googleapis.com/golden-wind/ignite/react-native/images/4.png",
         "https://storage.googleapis.com/golden-wind/ignite/react-native/images/5.png"
@@ -94,34 +55,15 @@
         "period": "Ao dia",
         "price": 620
       },
+      "interestedPerson" : true,
       "fuel_type": "gasoline_motor",
       "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/3.png",
-      "accessories": [
-        {
-          "type": "speed",
-          "name": "330km/h"
-        },
-        {
-          "type": "acceleration",
-          "name": "6.2s"
-        },
-        {
-          "type": "turning_diameter",
-          "name": "900 HP"
-        },
-        {
-          "type": "gasoline_motor",
-          "name": "Gasoline"
-        },
-        {
-          "type": "exchange",
-          "name": "Auto"
-        },
-        {
-          "type": "seats",
-          "name": "2 pessoas"
-        }
-      ],
+      "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
       "photos": [
         "https://storage.googleapis.com/golden-wind/ignite/react-native/images/6.png",
         "https://storage.googleapis.com/golden-wind/ignite/react-native/images/7.png",
@@ -137,34 +79,15 @@
         "period": "Ao dia",
         "price": 120
       },
+      "interestedPerson" : false,
       "fuel_type": "electric_motor",
       "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/4.png",
-      "accessories": [
-        {
-          "type": "speed",
-          "name": "380km/h"
-        },
-        {
-          "type": "acceleration",
-          "name": "3.2s"
-        },
-        {
-          "type": "turning_diameter",
-          "name": "800 HP"
-        },
-        {
-          "type": "electric_motor",
-          "name": "Elétrico"
-        },
-        {
-          "type": "exchange",
-          "name": "Auto"
-        },
-        {
-          "type": "seats",
-          "name": "2 pessoas"
-        }
-      ],
+      "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
       "photos": [
         "https://storage.googleapis.com/golden-wind/ignite/react-native/images/9.png",
         "https://storage.googleapis.com/golden-wind/ignite/react-native/images/10.png",
@@ -180,34 +103,15 @@
         "period": "Ao dia",
         "price": 120
       },
+      "interestedPerson" : true,
       "fuel_type": "gasoline_motor",
       "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/5.png",
-      "accessories": [
-        {
-          "type": "speed",
-          "name": "180km/h"
-        },
-        {
-          "type": "acceleration",
-          "name": "1.5s"
-        },
-        {
-          "type": "turning_diameter",
-          "name": "600 HP"
-        },
-        {
-          "type": "gasoline_motor",
-          "name": "Gasolina"
-        },
-        {
-          "type": "exchange",
-          "name": "Auto"
-        },
-        {
-          "type": "seats",
-          "name": "5 pessoas"
-        }
-      ],
+      "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
       "photos": [
         "https://storage.googleapis.com/golden-wind/ignite/react-native/images/12.png",
         "https://storage.googleapis.com/golden-wind/ignite/react-native/images/13.png",
@@ -223,34 +127,15 @@
         "period": "Ao dia",
         "price": 220
       },
+      "interestedPerson" : false,
       "fuel_type": "hybrid_motor",
       "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/6.png",
-      "accessories": [
-        {
-          "type": "speed",
-          "name": "180km/h"
-        },
-        {
-          "type": "acceleration",
-          "name": "2.0s"
-        },
-        {
-          "type": "turning_diameter",
-          "name": "600 HP"
-        },
-        {
-          "type": "hybrid_motor",
-          "name": "Híbrido"
-        },
-        {
-          "type": "exchange",
-          "name": "Auto"
-        },
-        {
-          "type": "seats",
-          "name": "5 pessoas"
-        }
-      ],
+      "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
       "photos": [
         "https://storage.googleapis.com/golden-wind/ignite/react-native/images/15.png",
         "https://storage.googleapis.com/golden-wind/ignite/react-native/images/16.png",
@@ -409,32 +294,12 @@
         },
         "fuel_type": "gasoline_motor",
         "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/3.png",
-        "accessories": [
-          {
-            "type": "speed",
-            "name": "330km/h"
-          },
-          {
-            "type": "acceleration",
-            "name": "6.2s"
-          },
-          {
-            "type": "turning_diameter",
-            "name": "900 HP"
-          },
-          {
-            "type": "gasoline_motor",
-            "name": "Gasoline"
-          },
-          {
-            "type": "exchange",
-            "name": "Auto"
-          },
-          {
-            "type": "seats",
-            "name": "2 pessoas"
-          }
-        ],
+        "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
         "photos": [
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/6.png",
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/7.png",
@@ -458,32 +323,12 @@
         },
         "fuel_type": "gasoline_motor",
         "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/5.png",
-        "accessories": [
-          {
-            "type": "speed",
-            "name": "180km/h"
-          },
-          {
-            "type": "acceleration",
-            "name": "1.5s"
-          },
-          {
-            "type": "turning_diameter",
-            "name": "600 HP"
-          },
-          {
-            "type": "gasoline_motor",
-            "name": "Gasolina"
-          },
-          {
-            "type": "exchange",
-            "name": "Auto"
-          },
-          {
-            "type": "seats",
-            "name": "5 pessoas"
-          }
-        ],
+        "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
         "photos": [
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/12.png",
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/13.png",
@@ -507,32 +352,12 @@
         },
         "fuel_type": "electric",
         "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/1.png",
-        "accessories": [
-          {
-            "type": "speed",
-            "name": "250km/h"
-          },
-          {
-            "type": "acceleration",
-            "name": "3.8s"
-          },
-          {
-            "type": "turning_diameter",
-            "name": "800 HP"
-          },
-          {
-            "type": "electric_motor",
-            "name": "Elétrico"
-          },
-          {
-            "type": "exchange",
-            "name": "Auto"
-          },
-          {
-            "type": "seats",
-            "name": "5 pessoas"
-          }
-        ],
+        "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
         "photos": [
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/1.png",
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/2.png",
@@ -556,32 +381,12 @@
         },
         "fuel_type": "gasoline_motor",
         "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/2.png",
-        "accessories": [
-          {
-            "type": "speed",
-            "name": "315km/h"
-          },
-          {
-            "type": "acceleration",
-            "name": "2.9s"
-          },
-          {
-            "type": "turning_diameter",
-            "name": "700 HP"
-          },
-          {
-            "type": "gasoline_motor",
-            "name": "Gasoline"
-          },
-          {
-            "type": "exchange",
-            "name": "Auto"
-          },
-          {
-            "type": "seats",
-            "name": "4 pessoas"
-          }
-        ],
+        "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
         "photos": [
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/4.png",
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/5.png"
@@ -604,32 +409,12 @@
         },
         "fuel_type": "gasoline_motor",
         "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/2.png",
-        "accessories": [
-          {
-            "type": "speed",
-            "name": "315km/h"
-          },
-          {
-            "type": "acceleration",
-            "name": "2.9s"
-          },
-          {
-            "type": "turning_diameter",
-            "name": "700 HP"
-          },
-          {
-            "type": "gasoline_motor",
-            "name": "Gasoline"
-          },
-          {
-            "type": "exchange",
-            "name": "Auto"
-          },
-          {
-            "type": "seats",
-            "name": "4 pessoas"
-          }
-        ],
+        "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
         "photos": [
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/4.png",
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/5.png"
@@ -652,32 +437,12 @@
         },
         "fuel_type": "gasoline_motor",
         "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/2.png",
-        "accessories": [
-          {
-            "type": "speed",
-            "name": "315km/h"
-          },
-          {
-            "type": "acceleration",
-            "name": "2.9s"
-          },
-          {
-            "type": "turning_diameter",
-            "name": "700 HP"
-          },
-          {
-            "type": "gasoline_motor",
-            "name": "Gasoline"
-          },
-          {
-            "type": "exchange",
-            "name": "Auto"
-          },
-          {
-            "type": "seats",
-            "name": "4 pessoas"
-          }
-        ],
+        "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
         "photos": [
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/4.png",
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/5.png"
@@ -700,32 +465,12 @@
         },
         "fuel_type": "gasoline_motor",
         "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/2.png",
-        "accessories": [
-          {
-            "type": "speed",
-            "name": "315km/h"
-          },
-          {
-            "type": "acceleration",
-            "name": "2.9s"
-          },
-          {
-            "type": "turning_diameter",
-            "name": "700 HP"
-          },
-          {
-            "type": "gasoline_motor",
-            "name": "Gasoline"
-          },
-          {
-            "type": "exchange",
-            "name": "Auto"
-          },
-          {
-            "type": "seats",
-            "name": "4 pessoas"
-          }
-        ],
+        "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
         "photos": [
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/4.png",
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/5.png"
@@ -748,32 +493,12 @@
         },
         "fuel_type": "gasoline_motor",
         "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/2.png",
-        "accessories": [
-          {
-            "type": "speed",
-            "name": "315km/h"
-          },
-          {
-            "type": "acceleration",
-            "name": "2.9s"
-          },
-          {
-            "type": "turning_diameter",
-            "name": "700 HP"
-          },
-          {
-            "type": "gasoline_motor",
-            "name": "Gasoline"
-          },
-          {
-            "type": "exchange",
-            "name": "Auto"
-          },
-          {
-            "type": "seats",
-            "name": "4 pessoas"
-          }
-        ],
+        "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
         "photos": [
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/4.png",
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/5.png"
@@ -796,32 +521,12 @@
         },
         "fuel_type": "gasoline_motor",
         "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/2.png",
-        "accessories": [
-          {
-            "type": "speed",
-            "name": "315km/h"
-          },
-          {
-            "type": "acceleration",
-            "name": "2.9s"
-          },
-          {
-            "type": "turning_diameter",
-            "name": "700 HP"
-          },
-          {
-            "type": "gasoline_motor",
-            "name": "Gasoline"
-          },
-          {
-            "type": "exchange",
-            "name": "Auto"
-          },
-          {
-            "type": "seats",
-            "name": "4 pessoas"
-          }
-        ],
+        "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
         "photos": [
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/4.png",
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/5.png"
@@ -844,32 +549,12 @@
         },
         "fuel_type": "gasoline_motor",
         "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/2.png",
-        "accessories": [
-          {
-            "type": "speed",
-            "name": "315km/h"
-          },
-          {
-            "type": "acceleration",
-            "name": "2.9s"
-          },
-          {
-            "type": "turning_diameter",
-            "name": "700 HP"
-          },
-          {
-            "type": "gasoline_motor",
-            "name": "Gasoline"
-          },
-          {
-            "type": "exchange",
-            "name": "Auto"
-          },
-          {
-            "type": "seats",
-            "name": "4 pessoas"
-          }
-        ],
+        "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
         "photos": [
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/4.png",
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/5.png"
@@ -892,32 +577,12 @@
         },
         "fuel_type": "gasoline_motor",
         "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/2.png",
-        "accessories": [
-          {
-            "type": "speed",
-            "name": "315km/h"
-          },
-          {
-            "type": "acceleration",
-            "name": "2.9s"
-          },
-          {
-            "type": "turning_diameter",
-            "name": "700 HP"
-          },
-          {
-            "type": "gasoline_motor",
-            "name": "Gasoline"
-          },
-          {
-            "type": "exchange",
-            "name": "Auto"
-          },
-          {
-            "type": "seats",
-            "name": "4 pessoas"
-          }
-        ],
+        "placa": "ARX0H47",
+      "renavam": "173104827",
+      "modelo": "207HB XR",
+      "cor": "prata",
+      "valorCompra": "13.000,00",
+      "dataCompra": "24/04/2023",
         "photos": [
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/4.png",
           "https://storage.googleapis.com/golden-wind/ignite/react-native/images/5.png"

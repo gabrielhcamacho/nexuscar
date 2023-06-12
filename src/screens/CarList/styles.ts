@@ -1,5 +1,7 @@
+import { FlatList } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native'
+import { CarDTO } from '../../dtos/CarDTO'
 
 
 export const Container = styled.View`
@@ -49,11 +51,16 @@ export const SearchInput = styled.TextInput`
   color: ${({ theme }) => theme.colors.title};
 `
 
-export const CarFlatList = styled.FlatList.attrs({
+export const CarFlatList = styled(FlatList as new () => FlatList<CarDTO>).attrs({
   contentContainerStyle:{
     //padding: 24
   },
   showsVerticalScrollIndicator: false, 
   showsHorizontalScrollIndicator: false,
 })`
+`
+
+export const AddCarButton = styled.TouchableOpacity`
+  justify-content: center;
+  align-items: center;
 `
