@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import { StatusBar } from 'react-native'
+import { StatusBar, BackHandler } from 'react-native'
 import { CarCard } from '../../components/CarCard';
 import { Header } from '../../components/Header';
 import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-
 
 import {
   Container,
@@ -23,9 +22,14 @@ export function Home() {
   const navigation = useNavigation()
 
   function handleCarrosDisponiveis(){
-    navigation.navigate('CarList')
+    navigation.navigate('CarList' as never)
   }
 
+  useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', () => {
+      return true
+    })
+  },[])
 
   return (
     <Container>

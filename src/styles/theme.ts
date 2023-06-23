@@ -11,7 +11,8 @@ export default {
         title: '#47474d',
 
         line: '#ebebf0',
-        red: '#DC1637',
+        //red: '#DC1637',
+        red: '#FF7A00',
         red_light: '#fdedef',
         green: '#03b252',
 

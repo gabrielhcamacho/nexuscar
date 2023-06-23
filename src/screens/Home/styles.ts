@@ -34,11 +34,12 @@ export const Venda = styled.Text`
 `
 
 export const SeeMoreButton = styled.TouchableOpacity`
-    background-color: ${({ theme }) => theme.colors.green};
-    padding: 24px;
+    background-color: ${({ theme }) => theme.colors.red};
+    padding: 17px;
     border-radius: 8px;
     width: 150px;
     margin-top: 20px;
+    align-items: center;
 `
 
 export const Txt = styled.Text`

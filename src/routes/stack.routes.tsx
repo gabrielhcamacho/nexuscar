@@ -10,19 +10,23 @@ import { CarDetails } from '../screens/CarDetails'
 import { VendaConfirmada } from '../screens/VendaConfirmada'
 import { AddCar } from '../screens/AddCar'
 import { ConfirmSale } from '../screens/ConfirmSale';
+import { SignIn } from '../screens/SignIn';
 
 const { Navigator, Screen } = createNativeStackNavigator()
 
 export function StackRoutes(){
     return(
-        <Navigator initialRouteName='Splash' screenOptions={{ headerShown: false }}>
+        <Navigator initialRouteName='SignIn' screenOptions={{ headerShown: false }}>
             <Screen
-                name="Splash"
-                component={Splash}
+                name="SignIn"
+                component={SignIn}
             />
             <Screen
                 name="Home"
                 component={Home}
+                options={{
+                    gestureEnabled: false,
+                }}
             />
             <Screen
                 name="CarList"
