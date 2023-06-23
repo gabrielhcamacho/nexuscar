@@ -1,4 +1,5 @@
 
+import { TextInput } from 'react-native'
 import { RFValue } from 'react-native-responsive-fontsize'
 import styled from 'styled-components/native'
 
@@ -18,7 +19,7 @@ export const IconContainer = styled.View`
   margin-right: 2px;
 `
 
-export const InputText = styled.TextInput`
+export const InputText = styled(TextInput)`
   flex: 1;
 
   background-color: ${({ theme }) => theme.colors.background_secondary};

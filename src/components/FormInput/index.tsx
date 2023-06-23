@@ -13,16 +13,16 @@ interface Props extends TextInputProps{
     iconName: React.ComponentProps<typeof Feather>['name']
 }
 
-export function FormInput({iconName}: Props) {
+export function FormInput({iconName, ...rest}: Props) {
 
     const theme = useTheme()
-    
+
     return (
         <Container>
             <IconContainer>
                 <Feather name={iconName} size={24} color={theme.colors.text_detail} />
             </IconContainer>
-            <InputText />
+            <InputText {...rest}/>
         </Container>
     );
 }

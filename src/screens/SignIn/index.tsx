@@ -29,8 +29,7 @@ export function SignIn() {
       </Header>
 
       <Form>
-        <Input iconName="mail" placeholder='E-mail'/>
-        <FormInput iconName="mail"/>
+        <FormInput iconName="mail" placeholder='E-mail'/>
       </Form>
 
       <Footer>
