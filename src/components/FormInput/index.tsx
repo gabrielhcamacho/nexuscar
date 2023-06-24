@@ -10,10 +10,11 @@ import {
 } from './styles'
 
 interface Props extends TextInputProps{
-    iconName: React.ComponentProps<typeof Feather>['name']
+    iconName: React.ComponentProps<typeof Feather>['name'];
+    value?: string;
 }
 
-export function FormInput({iconName, ...rest}: Props) {
+export function FormInput({iconName, value, ...rest}: Props) {
 
     const theme = useTheme()
     const [isOnFocus, setIsOnFocus] = useState(false)
@@ -25,6 +26,7 @@ export function FormInput({iconName, ...rest}: Props) {
 
     function handleInputBlur(){
         setIsOnFocus(false);
+        setIsFilled(!!value) //verifica se tem conteudo, se tiver seta vertadeiro, se nao, falso
     }
 
     return (
@@ -33,7 +35,7 @@ export function FormInput({iconName, ...rest}: Props) {
                 <Feather 
                     name={iconName} 
                     size={24} 
-                    color={isOnFocus ? theme.colors.red : theme.colors.text_detail} />
+                    color={(isOnFocus || isFilled) ? theme.colors.red : theme.colors.text_detail} />
             </IconContainer>
             <InputText 
                 onFocus={handleInputFocus}
