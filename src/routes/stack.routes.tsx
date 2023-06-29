@@ -7,10 +7,12 @@ import { Home } from '../screens/Home'
 import { Splash } from '../screens/Splash'
 import { CarList } from '../screens/CarList'
 import { CarDetails } from '../screens/CarDetails'
-import { VendaConfirmada } from '../screens/VendaConfirmada'
+import { Confirmacao } from '../screens/Confirmacao'
 import { AddCar } from '../screens/AddCar'
 import { ConfirmSale } from '../screens/ConfirmSale';
 import { SignIn } from '../screens/SignIn';
+import { SignUpFirstStep } from '../screens/SignUp/FirstStep';
+import { SignUpSecondStep } from '../screens/SignUp/SecondStep';
 
 const { Navigator, Screen } = createNativeStackNavigator()
 
@@ -20,6 +22,14 @@ export function StackRoutes(){
             <Screen
                 name="SignIn"
                 component={SignIn}
+            />
+            <Screen
+                name="SignUpFirstStep"
+                component={SignUpFirstStep}
+            />
+            <Screen
+                name="SignUpSecondStep"
+                component={SignUpSecondStep}
             />
             <Screen
                 name="Home"
@@ -45,8 +55,8 @@ export function StackRoutes(){
                 component={ConfirmSale}
             />
             <Screen
-                name="VendaConfirmada"
-                component={VendaConfirmada}
+                name="Confirmacao"
+                component={Confirmacao}
             />
         </Navigator>
     )

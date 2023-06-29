@@ -19,7 +19,6 @@ export function BackButton({color, pageName, ...rest}: Props) {
     const navigation = useNavigation()
 
     function handleBack(){
-        console.log('aaa')
         navigation.goBack()
     }
 

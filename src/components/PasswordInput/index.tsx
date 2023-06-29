@@ -12,7 +12,7 @@ import {
 
 interface Props extends TextInputProps{
     iconName: React.ComponentProps<typeof Feather>['name'];
-    value: string;
+    value?: string;
 }
 
 export function PasswordInput({iconName, value, ...rest}: Props) {
@@ -36,8 +36,8 @@ export function PasswordInput({iconName, value, ...rest}: Props) {
     }
 
     return (
-        <Container isOnFocus={isOnFocus}>
-            <IconContainer>
+        <Container>
+            <IconContainer isOnFocus={isOnFocus}>
                 <Feather 
                     name={iconName} 
                     size={24} 
@@ -45,13 +45,14 @@ export function PasswordInput({iconName, value, ...rest}: Props) {
             </IconContainer>
 
             <InputText 
+                isOnFocus={isOnFocus}
                 onFocus={handleInputFocus}
                 onBlur={handleInputBlur}
                 secureTextEntry={isPasswordVisible}
                 {...rest}
             />
             <BorderlessButton onPress={handlePasswordVisibilityChange}>
-                <IconContainer>
+                <IconContainer isOnFocus={isOnFocus}>
                     <Feather 
                         name={isPasswordVisible ? 'eye' : 'eye-off'}
                         size={24} 

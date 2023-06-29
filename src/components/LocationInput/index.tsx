@@ -7,7 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 import {
     Container,
     InputText,
-    IconContainer
+    IconContainer,
 } from './styles'
 
 interface Props extends TextInputProps{
@@ -17,11 +17,15 @@ interface Props extends TextInputProps{
     ionicIcons?: boolean;
 }
 
-export function FormInput({iconName, value, ionicIcons, ionicName, ...rest}: Props) {
+
+
+export function LocationInput({iconName, value, ionicIcons, ionicName, ...rest}: Props){
 
     const theme = useTheme()
     const [isOnFocus, setIsOnFocus] = useState(false)
     const [isFilled, setIsFilled] = useState(false)
+    const [input, setInput] = useState('')
+    const [locationData, setLocationData] = useState()
 
     function handleInputFocus(){
         setIsOnFocus(true);
@@ -31,6 +35,11 @@ export function FormInput({iconName, value, ionicIcons, ionicName, ...rest}: Pro
         setIsOnFocus(false);
         setIsFilled(!!value) //verifica se tem conteudo, se tiver seta vertadeiro, se nao, falso
     }
+
+    // async function handleSearchLocation(text: string){
+    //     setInput(text)
+    // }
+
 
     return (
         <Container >
@@ -54,5 +63,5 @@ export function FormInput({iconName, value, ionicIcons, ionicName, ...rest}: Pro
                 {...rest}
             />
         </Container>
-    );
+    )
 }

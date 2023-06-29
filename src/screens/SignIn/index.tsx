@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { StatusBar, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } from 'react-native'
+import { StatusBar, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native'
 import { ConfirmButton } from '../../components/ConfirmButton';
 import { FormInput } from '../../components/FormInput';
 import { PasswordInput } from '../../components/PasswordInput';
 import theme from '../../styles/theme';
+import * as yup from 'yup'
+import { useNavigation } from '@react-navigation/native';
 
 import {
   Container,
@@ -18,6 +20,35 @@ export function SignIn() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('')
+  const navigation = useNavigation()
+
+  async function handleSignIn() {
+    try {
+      const schema = yup.object().shape({
+        email: yup.string()
+          .required("E-mail é obrigatório")
+          .email('Digite um e-mail valido'),
+        password: yup.string().required("A senha é obrigatória"),
+      })
+      await schema.validate({ email, password })
+      //fazer login
+
+
+    } catch (error) {
+      if (error instanceof yup.ValidationError) {
+        Alert.alert('Opa', error.message)
+      } else {
+        Alert.alert(
+          'Erro na autenticação',
+          'Ocorreu um erro ao fazer login, verifique as credenciais'
+        )
+      }
+    }
+  }
+
+  function handleNewAccount(){
+    navigation.navigate('SignUpFirstStep' as never)
+  }
 
   return (
     <KeyboardAvoidingView behavior='position' enabled>
@@ -30,7 +61,7 @@ export function SignIn() {
           />
 
           <Header>
-            <Title>Estamos{'\n'}quase lá</Title>
+            <Title>Bem vindo a{'\n'}Nexus Car</Title>
             <Subtitle>Faça login para começar sua experiência</Subtitle>
           </Header>
 
@@ -53,8 +84,18 @@ export function SignIn() {
           </Form>
 
           <Footer>
-            <ConfirmButton title='Login' onPress={() => { }} enabled={false} loading={false} />
-            <ConfirmButton light title='Criar uma conta' color={theme.colors.background_secondary} onPress={() => { }} />
+            <ConfirmButton
+              title='Login'
+              onPress={handleSignIn}
+              enabled={true}
+              loading={false}
+            />
+            <ConfirmButton
+              light
+              title='Criar uma conta'
+              color={theme.colors.background_secondary}
+              onPress={handleNewAccount}
+            />
           </Footer>
         </Container>
       </TouchableWithoutFeedback>

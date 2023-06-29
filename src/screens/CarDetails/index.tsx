@@ -41,7 +41,12 @@ export function CarDetails() {
     console.log(item)
 
     function handleVender() {
-        navigation.navigate('ConfirmSale')
+        navigation.navigate('Confirmacao' as never, {
+            title: 'Carro vendido',
+            message: `Você pode ver o historico das vendas
+            no menu do dashboard inicial`,
+            nextScreenRoute: 'Home'
+        } as never)
     }
 
     return (

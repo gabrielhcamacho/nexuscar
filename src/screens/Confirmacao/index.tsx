@@ -15,7 +15,7 @@ import {
     ButtonText,
     Footer
 } from './styles'
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 type RootStackParamList = {
     Home: undefined;
@@ -23,13 +23,24 @@ type RootStackParamList = {
     Feed: { sort: 'latest' | 'top' } | undefined;
   };
 
-export function VendaConfirmada() {
+interface Params{
+    title: string,
+    message: string,
+    nextScreenRoute: string
+}
+
+
+export function Confirmacao() {
 
     const { width } = useWindowDimensions()
+
     const navigation = useNavigation()
+    const route = useRoute()
+    const { title, message, nextScreenRoute } = route.params as Params
+
 
     function handleConfirmacao() {
-        navigation.navigate('Home')
+        navigation.navigate(nextScreenRoute as never)
     }
 
     return (
@@ -39,11 +50,10 @@ export function VendaConfirmada() {
 
             <Content>
                 <DoneSvg width={80} height={80} />
-                <Title>Venda Realizada</Title>
+                <Title>{title}</Title>
 
                 <Message>
-                    Você pode ver o historico das vendas {'\n'}
-                    no menu do dashboard inicial
+                    {message}
                 </Message>
             </Content>
 

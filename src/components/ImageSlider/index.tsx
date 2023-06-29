@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { FlatList, ViewToken } from 'react-native';
+import { Bullets } from '../Bullets';
 
 import {
   Container,
@@ -30,7 +31,7 @@ export function ImageSlider({ imagesUrl }: Props) {
     <Container>
       <ImageIndexes>
         {imagesUrl.map((_, index) => (
-          <ImageIndex key={String(index)} active={index === imageIndex} />
+          <Bullets key={String(index)} active={index === imageIndex} />
         ))
 
         }
