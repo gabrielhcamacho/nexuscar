@@ -6,7 +6,6 @@ import { BackButton } from '../../../components/BackButton';
 import { Bullets } from '../../../components/Bullets';
 import { FormInput } from '../../../components/FormInput';
 import { useTheme } from 'styled-components';
-import { Confirmacao } from '../../Confirmacao';
 
 import {
     Container,
@@ -20,6 +19,7 @@ import {
 import { LocationInput } from '../../../components/LocationInput';
 import { ConfirmButton } from '../../../components/ConfirmButton';
 import { PasswordInput } from '../../../components/PasswordInput';
+import api from '../../../services/api';
 
 
 interface Params {
@@ -49,11 +49,21 @@ export function SignUpSecondStep() {
             return Alert.alert("As senhas precisam ser as mesmas")
         }
 
-        navigation.navigate('Confirmacao' as never, {
-            title: 'Conta Criada',
-            message: `Agora é só fazer login\ne aproveitar`,
-            nextScreenRoute: 'SignIn'
-        } as never)
+        await api.post('/users', {
+           name: user.name,
+           email: user.email,
+           driver_license: user.cnpj,
+           password
+        }).then(() => {
+            navigation.navigate('Confirmacao' as never, {
+                title: 'Conta Criada',
+                message: `Agora é só fazer login\ne aproveitar`,
+                nextScreenRoute: 'SignIn'
+            } as never)
+        })
+        .catch(() => {
+            Alert.alert("opa", "Não foi possível cadastrar")
+        });
     }
 
     return (

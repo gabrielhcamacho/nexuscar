@@ -78,6 +78,7 @@ export function SignUpFirstStep() {
                             keyboardType='email-address'
                             onChangeText={setEmail}
                             value={email}
+                            autoCapitalize="none"
                         />
                         <FormInput
                             ionicIcons
