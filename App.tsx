@@ -8,6 +8,7 @@ import { Archivo_400Regular, Archivo_500Medium, Archivo_600SemiBold } from '@exp
 
 import theme from './src/styles/theme';
 import { Routes } from './src/routes';
+import { AppProvider } from './src/hooks'
 
 
 export default function App() {
@@ -20,7 +21,9 @@ export default function App() {
   }
   return (
     <ThemeProvider theme={theme}>
-      <Routes/>
+      <AppProvider>
+        <Routes />
+      </AppProvider>
     </ThemeProvider>
   );
 }
