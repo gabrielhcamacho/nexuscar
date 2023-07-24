@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext, ReactNode } from 'react';
 
-import api from '../services/api';
+import {api} from '../services/api';
 
 interface User{
     id: string,
@@ -39,6 +39,10 @@ function AuthProvider({ children }: AuthProviderProps){
             email, 
             password
         })
+
+        const { token, user } = response.data
+        api.defaults.headers.authorization = `Bearer ${token}`
+        setData({token, user})
     }
 
     return(

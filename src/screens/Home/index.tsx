@@ -25,12 +25,6 @@ export function Home() {
     navigation.navigate('CarList' as never)
   }
 
-  useEffect(() => {
-    BackHandler.addEventListener('hardwareBackPress', () => {
-      return true
-    })
-  },[])
-
   return (
     <Container>
       <StatusBar barStyle={'light-content'} backgroundColor="transparent" translucent />

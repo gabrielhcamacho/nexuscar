@@ -19,7 +19,7 @@ import {
 import { LocationInput } from '../../../components/LocationInput';
 import { ConfirmButton } from '../../../components/ConfirmButton';
 import { PasswordInput } from '../../../components/PasswordInput';
-import api from '../../../services/api';
+import {api} from '../../../services/api';
 
 
 interface Params {
@@ -61,7 +61,8 @@ export function SignUpSecondStep() {
                 nextScreenRoute: 'SignIn'
             } as never)
         })
-        .catch(() => {
+        .catch((error) => {
+            console.log(error)
             Alert.alert("opa", "Não foi possível cadastrar")
         });
     }

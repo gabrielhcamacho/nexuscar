@@ -5,7 +5,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
 import { CarCard } from '../../components/CarCard';
-import api from '../../services/api'
+import {api, jsonApi} from '../../services/api'
 import { CarDTO } from '../../dtos/CarDTO'
 import { Load } from '../../components/Load';
 import { BackButton } from '../../components/BackButton';
@@ -42,7 +42,7 @@ export function CarList() {
   useEffect(() => {
     async function fetchCars() {
       try {
-        const response = await api.get('/cars')
+        const response = await jsonApi.get('/cars')
         setCars(response.data)
       } catch (error) {
         console.log(error)
@@ -58,7 +58,7 @@ export function CarList() {
   const navigation = useNavigation()
 
   function handleAddCar(){
-    navigation.navigate('AddCar')
+    navigation.navigate('AddCar' as never)
   }
 
   return (

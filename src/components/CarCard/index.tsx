@@ -47,6 +47,8 @@ export function CarCard({ data, carData }: Props) {
   function handleCarDetails(item: CarDTO) {
     navigation.navigate('CarDetails', { item: item })
   }
+
+  console.log(data)
   
   return (
     <Container onPress={() => handleCarDetails(carData)}>
@@ -56,8 +58,8 @@ export function CarCard({ data, carData }: Props) {
 
         <About>
           <Info>
-            <Placa>{data.rent.period}</Placa>
-            <Price>{`R$ ${data.rent.price}`}</Price>
+            <Placa>{data.placa}</Placa>
+            <Price>{`R$ ${data.valorCompra}`}</Price>
           </Info>
 
           <Type>
