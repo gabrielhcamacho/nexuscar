@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } from 'react-native'
 import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
+import * as ImagePicker from 'expo-image-picker';
 
 import {
   Container,
@@ -27,17 +28,41 @@ import { FormInput } from '../../components/FormInput';
 import { PasswordInput } from '../../components/PasswordInput';
 import { useAuth } from '../../hooks/auth';
 
+
+
 export function Profile() {
 
   const { user } = useAuth()
+
   const [option, setOption] = useState<'dataEdit' | 'passwordEdit'>('dataEdit')
+  const [avatar, setAvatar] = useState(user.avatar);
+  const [name, setName] = useState(user.name)
+
   const theme = useTheme()
   const navigation = useNavigation()
+
 
   function handleSignOut() { }
 
   function handleOptionChange(optionSelected: 'dataEdit' | 'passwordEdit') {
     setOption(optionSelected)
+  }
+
+  async function handleSelectAvatar(){
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true, 
+      aspect: [4, 4],
+      quality: 1,
+    })
+
+    if(result.canceled){
+      return;
+    }
+
+    if(!result.canceled){
+      setAvatar(result.assets[0].uri);
+    }
   }
 
   return (
@@ -56,8 +81,8 @@ export function Profile() {
             </HeaderTop>
 
             <PhotoContainer>
-              <Photo source={{ uri: 'https://instacarmultimarcas.com.br/sites/instacarmultimarcas.com.br/img/img-og.png' }} />
-              <PhotoButton onPress={() => { }}>
+             { !!avatar && <Photo source={{ uri: avatar }} />}
+              <PhotoButton onPress={handleSelectAvatar}>
                 <Ionicons name="camera-outline" size={24} color={theme.colors.shape} />
               </PhotoButton>
             </PhotoContainer>
@@ -89,6 +114,7 @@ export function Profile() {
                     placeholder="nome"
                     autoCorrect={false}
                     defaultValue={user.name}
+                    onChangeText={setName}
                   />
                   <FormInput
                     iconName="mail"
