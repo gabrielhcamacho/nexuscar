@@ -11,7 +11,7 @@ import { useNavigation } from '@react-navigation/native';
 
 interface Props extends BorderlessButtonProps{
     color?: string;
-    pageName: string;
+    pageName?: string;
 }
 
 export function BackButton({color, pageName, ...rest}: Props) {
@@ -26,7 +26,7 @@ export function BackButton({color, pageName, ...rest}: Props) {
     return (
         <Container onPress={handleBack}>
             <Ionicons name="ios-chevron-back" size={28} color={color ? color : theme.colors.header} />
-            <BackToPage>{pageName}</BackToPage>
+            {pageName? <BackToPage>{pageName}</BackToPage> : <></>}
         </Container>
     );
 }
