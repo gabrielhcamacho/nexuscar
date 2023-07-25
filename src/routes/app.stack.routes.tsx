@@ -7,7 +7,8 @@ import { Home } from '../screens/Home'
 import { CarList } from '../screens/CarList'
 import { CarDetails } from '../screens/CarDetails'
 import { Confirmacao } from '../screens/Confirmacao'
-import { AddCar } from '../screens/AddCar'
+import { AddCarFirstStep } from '../screens/AddCar/FirstStep'
+import { AddCarSecondStep } from '../screens/AddCar/SecondStep'
 import { ConfirmSale } from '../screens/ConfirmSale';
 
 
@@ -25,8 +26,12 @@ export function AppStackRoutes() {
                 component={CarList}
             />
             <Screen
-                name="AddCar"
-                component={AddCar}
+                name="AddCarFirstStep"
+                component={AddCarFirstStep}
+            />
+            <Screen
+                name="AddCarSecondStep"
+                component={AddCarSecondStep}
             />
             <Screen
                 name="CarDetails"

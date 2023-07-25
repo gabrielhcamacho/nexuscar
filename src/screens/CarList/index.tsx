@@ -58,7 +58,7 @@ export function CarList() {
   const navigation = useNavigation()
 
   function handleAddCar(){
-    navigation.navigate('AddCar' as never)
+    navigation.navigate('AddCarFirstStep' as never)
   }
 
   return (

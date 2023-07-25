@@ -11,7 +11,8 @@ export function Routes(){
 
   return (
     <NavigationContainer>
-        {user ? <AppTabRoutes/> : <AuthRoutes/>}
+       <AppTabRoutes/>
+        {/* {user ? <AppTabRoutes/> : <AuthRoutes/>} */}
     </NavigationContainer>
   );
 }

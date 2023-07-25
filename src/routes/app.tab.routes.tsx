@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { AppStackRoutes} from './app.stack.routes'
 import { Home } from '../screens/Home'
-import { AddCar } from '../screens/AddCar'
+import { AddCar } from '../screens/AddCar/FirstStep'
 import { Platform } from 'react-native';
 import { Profile } from '../screens/Profile';
 import { Leilao } from '../screens/Leilao';

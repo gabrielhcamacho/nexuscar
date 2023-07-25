@@ -51,6 +51,7 @@ export function FormInput({iconName, value, ionicIcons, ionicName, ...rest}: Pro
                 isOnFocus={isOnFocus}
                 onFocus={handleInputFocus}
                 onBlur={handleInputBlur}
+                autoCorrect={false}
                 {...rest}
             />
         </Container>

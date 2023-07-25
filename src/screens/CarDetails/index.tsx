@@ -38,7 +38,6 @@ export function CarDetails() {
     const navigation = useNavigation()
     const route = useRoute()
     const { item } = route.params as Params;
-    console.log(item)
 
     function handleVender() {
         navigation.navigate('Confirmacao' as never, {
